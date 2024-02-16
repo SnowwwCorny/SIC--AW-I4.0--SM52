@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/docentes/{codigo}', function ($codigo) {
+    return view('docentes')->with('clave', $codigo);
+});
+
+Route::get('/estudiantes', function () {
+    return view('estudiantes');
+})->name('alumnos');
+
