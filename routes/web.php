@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Student\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/docentes/{codigo}', function ($codigo) {
+/*Route::get('/docentes/{codigo}', function ($codigo) {
     return view('docentes')->with('clave', $codigo);
-});
+});*/
 
-Route::get('/estudiantes', function () {
+/*Route::get('/estudiantes', function () {
     return view('estudiantes');
-})->name('alumnos');
+})->name('alumnos');*/
 
+Route::get('/alumnos', [StudentController::class, 'index']);
+Route::post('/alumnos', [StudentController::class, 'store']);
