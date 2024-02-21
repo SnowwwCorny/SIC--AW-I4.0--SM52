@@ -32,11 +32,17 @@
         </li>
     </ul>
 </header>
-    <main>
+    <main class="p-5">
         @yield('contenido')
     </main>
-    <footer>
-        <p>Todos los derechos reservados</p>
+    <footer class="bg-black text-white p-5">
+        <div class="p-5">
+            <p class="">Todos los derechos reservados</p>
+            <p>Contactanos</p>
+            <p>Facebook, Instagram</p>
+
+        </div>
+        
     </footer>
 </body>
 </html>

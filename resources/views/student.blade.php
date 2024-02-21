@@ -7,7 +7,7 @@
         <h1 class="text-3xl font-bold p-4 text-center">Formulario de alumno</h1>
     <div class="flex items-center justify-center mr-3">
 
-        <form action="{{url('alumnos')}}" metohd="POST">
+        <form action="{{url('alumnos')}}" method="POST">
         @csrf
         <p class="p-2">Nombre</p>
             <input class="border p-2 rounded-lg" name="name_student" type="text">
