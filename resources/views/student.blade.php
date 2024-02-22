@@ -5,27 +5,27 @@
 
 @section('contenido')
         <h1 class="text-3xl font-bold p-4 text-center">Formulario de alumno</h1>
-    <div class="flex items-center justify-center mr-3">
+    <div class="flex items-center justify-center mr-24">
 
-        <form action="{{url('alumnos')}}" method="POST">
+        <form class="" action="{{url('alumnos')}}" method="POST">
         @csrf
         <p class="p-2">Nombre</p>
-            <input class="border p-2 rounded-lg" name="name_student" type="text">
+            <input class="border p-2 rounded-lg" style="width: 150%" name="name_student" type="text">
             @error('name_student')
-                <div style="color: red">{{$message}}</div>
+                <div class="text-center" style="color: red">{{$message}}</div>
             @enderror
         <p class="p-2">Matricula</p>
-            <input class="border p-2 rounded-lg" name="id_student" type="text">
+            <input class="border p-2 rounded-lg" style="width: 150%" name="id_student" type="text">
             
         <p class="p-2">Correo</p>
-            <input class="border p-2 rounded-lg" name="email_student" type="email">
+            <input class="border p-2 rounded-lg" style="width: 150%" name="email_student" type="email">
             @error('email_student')
-                <div style="color: red">{{$message}}</div>
+                <div class="text-center" style="color: red">{{$message}}</div>
             @enderror
         <p class="p-2">Contraseña</p>
-            <input class="border p-2 rounded-lg" name="password_student" type="password">
+            <input class="border p-2 rounded-lg" style="width: 150%" name="password_student" type="password">
             @error('password_student')
-                <div style="color: red">{{$message}}</div>
+                <div class="text-center" style="color: red">{{$message}}</div>
             @enderror
     
     </div>

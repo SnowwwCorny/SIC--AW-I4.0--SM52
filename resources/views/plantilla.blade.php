@@ -22,20 +22,29 @@
         </style>
 </head>
 <body>
-<header class="bg-green-400 p-5">
+<header class="bg-green-400 p-5 shadow-xl">
     <ul class="flex justify-between">
         <li>
             <img class="w-32" src="https://lh4.googleusercontent.com/proxy/4Ji1fjGT2LPtIqp1eMt74VwGC2dJ_CT9gSBwcJe8WEbcK4cMJwYwUhJh4y16o8aBMZKJ5ga3ccIRuD8ABNsFVf-90qt2x6_UYm3BRjI5bPMu_V4MRpKOulaDMTwRug">
         </li>
         <li>
-            <button class="bg-gray-100 p-2 rounded-lg hover:bg-white">Cerrar sesion</button>
+            <a class="font-bold">Home</a>
+        </li>
+        <li>
+            <a class="font-bold">Formulario</a>
+        </li>
+        <li>
+            <a class="font-bold">Calificaciones</a>
+        </li>
+        <li>
+            <button class="bg-gray-200 p-2 rounded-lg hover:bg-white shadow">Cerrar sesion</button>
         </li>
     </ul>
 </header>
     <main class="p-5">
         @yield('contenido')
     </main>
-    <footer class="bg-black text-white p-5">
+    <footer class="bg-black text-white p-5 shadow-lg">
         <div class="p-5">
             <p class="">Todos los derechos reservados</p>
             <p>Contactanos</p>
