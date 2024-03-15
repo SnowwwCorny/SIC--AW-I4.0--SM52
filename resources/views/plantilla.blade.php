@@ -19,6 +19,14 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #325B87; /* Color de fondo */
+        text-align: left; /* Alineación del texto */
+        color: white; /* Color del texto */
+    }
         </style>
 </head>
 <body>
@@ -44,11 +52,10 @@
     <main class="p-5">
         @yield('contenido')
     </main>
-    <footer class="bg-black text-white p-5 shadow-lg">
-        <div class="p-5">
+    <footer class="bg-black text-white p-3 shadow-lg">
+        <div class="p-2">
             <p class="">Todos los derechos reservados</p>
-            <p>Contactanos</p>
-            <p>Facebook, Instagram</p>
+            
 
         </div>
         

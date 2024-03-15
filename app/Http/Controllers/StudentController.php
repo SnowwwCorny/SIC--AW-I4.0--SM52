@@ -1,9 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\StudentRequest;
 use App\Models\Student;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
@@ -14,7 +15,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students=Student::all();
+        //$students=Student::all();
+        $students=Student::paginate(10);
         return view('students', compact('students'));
     }
 
@@ -34,9 +36,17 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StudentRequest $request)
     {
-        //
+        $student = new Student;
+        $student->name_student = $request->name_student;
+        $student->lastame_student = $request->lastame_student;
+        $student->id_stident = $request->id_stident;
+        $student->bithday = $request->bithday;
+        $student->comments = $request->comments;
+        $student->save();
+    
+        return redirect()->route('estudiantes.index')->with('success', 'Datos agregados exitosamente.');
     }
 
     /**
@@ -48,6 +58,8 @@ class StudentController extends Controller
     public function show($id)
     {
         //
+        $student=Student::find($id);
+        return view('show-student', compact('student'));
     }
 
     /**
@@ -58,7 +70,8 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = Student::find($id);
+        return view('edit-student', compact('student'));
     }
 
     /**
@@ -68,9 +81,18 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StudentRequest $request, $id):RedirectResponse
     {
-        //
+        $student = Student::find($id);
+        $student->update([
+            'name_student' => $request->input('name_student'),
+            'lastname_student' => $request->input('lastname_student'),
+            //'id_stident' => $request->input('id_stident'),
+            //'bithday' => $request->input('bithday'),
+            //'comments' => $request->input('comments')
+        ]);
+        return redirect()->route('estudiantes.index')->with('notificacion', 'Estudiante editado correctamente');
+        
     }
 
     /**

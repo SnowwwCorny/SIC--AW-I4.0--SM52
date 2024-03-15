@@ -27,8 +27,8 @@ class StudentRequest extends FormRequest
             //agregar todas las reglas de validacion
             //los names de los campos del formulario
             'name_student' => 'required|alpha',
-            'email_student' => 'required|email',
-            'password_student' => 'required|between:5,10',
+            //'id_stident' => 'required|numeric',
+            //'bithday' => 'required|date',
         ];
     }
 }
