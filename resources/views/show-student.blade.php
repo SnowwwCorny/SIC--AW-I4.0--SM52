@@ -11,7 +11,7 @@
             <p class="text-2xl p-2 ">Apellido: {{$student->lastname_student}}</p>
             <p class="text-2xl p-2 ">Matricula: {{$student->id_stident}} </p>
             <p class="text-2xl p-2 ">Cumpleaños: {{$student->bithday}} </p>
-            <p class="p-2">Comentarios: {{$student->comments}}</p>
+            <p class="text-2xl p-2">Comentarios: <span>{{$student->comments}}</span></p>
             
         </div>
     </div>

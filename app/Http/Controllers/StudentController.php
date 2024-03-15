@@ -40,7 +40,7 @@ class StudentController extends Controller
     {
         $student = new Student;
         $student->name_student = $request->name_student;
-        $student->lastame_student = $request->lastame_student;
+        $student->lastname_student = $request->lastname_student;
         $student->id_stident = $request->id_stident;
         $student->bithday = $request->bithday;
         $student->comments = $request->comments;
@@ -87,9 +87,9 @@ class StudentController extends Controller
         $student->update([
             'name_student' => $request->input('name_student'),
             'lastname_student' => $request->input('lastname_student'),
-            //'id_stident' => $request->input('id_stident'),
-            //'bithday' => $request->input('bithday'),
-            //'comments' => $request->input('comments')
+            'id_stident' => $request->input('id_stident'),
+            'bithday' => $request->input('bithday'),
+            'comments' => $request->input('comments')
         ]);
         return redirect()->route('estudiantes.index')->with('notificacion', 'Estudiante editado correctamente');
         

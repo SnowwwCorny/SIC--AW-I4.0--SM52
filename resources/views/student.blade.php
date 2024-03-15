@@ -4,7 +4,7 @@
 @endsection
 
 @section('contenido')
-        <h1 class="text-3xl font-bold p-2 text-center">Formulario de alumno</h1>
+        <h1 class="text-3xl font-bold p-2 text-center">Agregar un nuevo estudiante</h1>
     <div class="flex items-center justify-center mr-24">
 
         <form class="" action="{{url('estudiantes')}}" method="POST">
@@ -28,10 +28,10 @@
                 <div class="text-center" style="color: red">{{$message}}</div>
             @enderror
         <p class="p-2">Comentarios</p>
-            <textarea class="border p-2 rounded-lg" style="width: 150%" name="lastname_student" type="text"></textarea>
+            <input class="border p-2 rounded-lg" style="width: 150%" name="comments" type="text"></input>
     </div>
     <div class="flex items-center justify-center mr-4">
-    <button class="bg-indigo-500 p-2 rounded-lg hover:bg-indigo-400 text-white m-4">Enviar</button>
+    <button class="bg-green-300 p-2 rounded-lg hover:bg-green-100 text-white m-4">Enviar</button>
     </div>
 </form>
 @endsection

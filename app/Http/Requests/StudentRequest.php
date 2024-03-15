@@ -26,9 +26,13 @@ class StudentRequest extends FormRequest
         return [
             //agregar todas las reglas de validacion
             //los names de los campos del formulario
-            'name_student' => 'required|alpha',
-            //'id_stident' => 'required|numeric',
-            //'bithday' => 'required|date',
+        
+            'name_student' => 'required|string|max:255',
+            'lastname_student' => 'required|string|max:255',
+            'id_stident' => 'required|numeric',
+            'bithday' => 'required|date',
+            'comments' => 'nullable|string',
+
         ];
     }
 }

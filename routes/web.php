@@ -18,7 +18,7 @@ use App\Http\Controllers\StudentsReportsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dash');
 });
 
 Route::get('/dashboard', function () {
@@ -53,6 +53,14 @@ Route::get('students', function(){
 
 Route::get('formulario', function(){
     return view('student');
+});
+
+Route::get('horario', function(){
+    return view('horario');
+});
+
+Route::get('calificaciones', function(){
+    return view('calificaciones');
 });
 
 Route::get('reportes/{estudiantes}', [StudentsReportsController::class,'show_cardex'])->name('reportes.imprimir');

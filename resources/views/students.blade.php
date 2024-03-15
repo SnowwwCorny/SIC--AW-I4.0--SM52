@@ -5,8 +5,10 @@
 
 @section('contenido')
 <h1 class="text-center text-4xl font-bold p-5">Lista de estudiantes</h1>
-<a href="formulario"><button class="bg-blue-500 p-3 text-white hover:bg-blue-300 rounded-lg">Agregar</button></a>
-<table class="border shadow-xl p-2">
+<div class="py-3">
+    <a href="formulario"><button class="bg-green-300 hover:bg-green-100 p-2 text-white rounded-lg mr-4">Agregar</button></a>
+</div>
+<table class="border shadow-xl p-2 mr-4">
     <th class="border px-2 py-2 bg-green-500">Nombre</th>
     <th class="border px-2 py-2 bg-green-500">Apellido</th>
     <th class="border px-2 py-2 bg-green-500">Matricula</th>
@@ -26,7 +28,7 @@
     </tr>
     @endforeach
 </table>
-<div>
+<div class="p-2">
     {{$students->links()}}
 </div>
 @endsection
